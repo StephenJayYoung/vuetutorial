@@ -6,39 +6,44 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+  
 </head>
 <body>
 
   <!-- navigation bar -->
   <nav class="navbar navbar-default">
     <div class="container-fluid">
-      <a class="navbar-brand"><i class="glyphicon glyphicon-bullhorn"></i> Vue Events Bulletin Board</a>
+      <a class="navbar-brand"><i class="glyphicon glyphicon-bullhorn"></i> super cool jbac workout list</a>
     </div>
   </nav>
 
-  <!-- main body of our application -->
-  <div class="container" id="events">
 
-    <!-- add an event form -->
-    <div class="col-sm-6">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3>Add an Event</h3>
-        </div>
-        <div class="panel-body">
 
-        </div>
+  <div class="panel-heading">
+  <h3>Add a workout</h3>
+</div>
+<div class="panel-body">
 
-      </div>
-    </div>
-
-    <!-- show the events -->
-    <div class="col-sm-6">
-      <div class="list-group">
-
-      </div>
-    </div>
+  <div class="form-group">
+    <input class="form-control" placeholder="Workout Name" v-model="event.name">
   </div>
+
+  <div class="form-group">
+    <textarea class="form-control" placeholder="Workout Description" v-model="event.description"></textarea>
+  </div>
+
+  <div class="form-group">
+    <input type="date" class="form-control" placeholder="Date" v-model="event.date">
+  </div>
+
+  <button class="btn btn-primary" v-on="click: addEvent">Submit</button>
+
+</div>
+
 
   <!-- JS -->
   <script src="node_modules/vue/dist/vue.js"></script>
